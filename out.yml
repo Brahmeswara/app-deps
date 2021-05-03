@@ -1,0 +1,15 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: Docudata Base Platform
+Transform:
+- AWS::Serverless-2016-10-31
+Resources:
+  CommonLibsLayer:
+    Type: AWS::Serverless::LayerVersion
+    Properties:
+      LayerName: docudata-app-deps-001
+      Description: docudata app dependencies
+      ContentUri: s3://docudata-be-sam-deploy-bucket/cdcf2119d1d87e1c895d6ac37069dca7
+      CompatibleRuntimes:
+      - nodejs14.x
+      LicenseInfo: MIT
+      RetentionPolicy: Retain
