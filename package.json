@@ -7,10 +7,12 @@
         "prepare": "npm run co:login",
         "build:layer": "git-bash.exe  build.bash",
         "build:production": "npm run prepare && npm install --production && npm run build:layer",
-        "aws:deploy": "package.bat && deploy.bat"
+        "sam-package" : "sam package --template-file template.yml --s3-bucket docudata-be-sam-deploy-bucket --output-template-file out.yml",
+        "sam-deploy"  : "sam deploy --template-file ./out.yml --stack-name docudata-be-lambda-layer-app-deps-stack --capabilities CAPABILITY_AUTO_EXPAND CAPABILITY_NAMED_IAM",
+        "aws:deploy": "npm run sam-package && npm run sam-deploy"
     },
     "dependencies": {
-        "@docudata/bp-config-core": "^1.0.1",
+        "@docudata/bp-config-core": "^1.0.2",
         "@docudata/common-utils": "^1.2.2"
     }
 }
