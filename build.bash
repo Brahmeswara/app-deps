@@ -30,4 +30,3 @@ echo "--> Copying $LAYER_BASE/node_modules to $LAYER_DEST/nodejs/node_modules.."
 mv $LAYER_BASE/node_modules/@docudata $LAYER_DEST/nodejs/node_modules/@docudata
 
 echo '--> Done..'
-echo '--> refer to the path layer-app-deps as the layer uri in your SAM or cloud formation file.'
