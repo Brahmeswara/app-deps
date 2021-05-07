@@ -8,7 +8,7 @@ Resources:
     Properties:
       LayerName: docudata-app-deps-001
       Description: docudata app dependencies
-      ContentUri: s3://docudata-be-sam-deploy-bucket/809279ac5f6bc20864d3dc505b466fdc
+      ContentUri: s3://docudata-be-sam-deploy-bucket/f9784eebef706b10b20be0a68859845f
       CompatibleRuntimes:
       - nodejs14.x
       LicenseInfo: MIT
